@@ -1,2 +1,2 @@
 # Windows-Internals
-all undocumented fun stuff that windows has to offer
+all the fun stuff that windows has to offer
