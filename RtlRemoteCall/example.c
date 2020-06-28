@@ -20,9 +20,7 @@ VOID test(void) {
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nCmdShow) {
   
     HANDLE hthread = CreateThread(NULL, NULL, 0, 0, 0x1, 0);
-    bool bsuspended = false;
-    bool bcontext = false;
-    
+  
     NTSTATUS nt_stat=RtlRemoteCall(GetCurrentProcess(), hthread, &test, 0, NULL, FALSE,FALSE);
     ResumeThread(hthread);
     return 0;
